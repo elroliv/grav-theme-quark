@@ -1,0 +1,8 @@
+<h3>{{ item.header.title }}</h3>
+<p>{{ item.content|raw }}</p>
+{% if item.header.lesson_price_low_season is defined %}
+<p>Basse saison : {{ item.header.lesson_price_low_season }} Euros</p>
+{% endif %}
+{% if item.header.lesson_price_high_season is defined %}
+<p>Haute saison : {{ item.header.lesson_price_high_season }} Euros</p>
+{% endif %}

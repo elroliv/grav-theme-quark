@@ -1,0 +1,28 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        blog:
+          type: tab
+          title: KITE_LESSON.BLUEPRINT_TITLE
+
+          fields:
+
+            header.lesson_price_low_season:
+              type: text
+              label: KITE_LESSON.LESSON_PRICE_LOW_SEASON
+              placeholder:
+              validate:
+                type: int
+
+            header.lesson_price_high_season:
+              type: text
+              label: KITE_LESSON.LESSON_PRICE_HIGH_SEASON
+              placeholder:
+              validate:
+                type: int
+
+

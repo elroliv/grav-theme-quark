@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+{% set collection = page.collection() %}
+
+{% block content %}
+    <h1>{{ page.header.title }}</h1>
+    
+    <h2>Les différentes formules de cours de kitesurf</h2>
+
+    {% for item in collection %}
+        {% include 'partials/kite/kite-lesson-item.twig' %}
+    {% endfor %}
+    <h2>Informations sur les cours</h2>
+        {{ page.content|raw }}
+{% endblock %}

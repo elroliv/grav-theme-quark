@@ -1,0 +1,16 @@
+extends@: default
+title: Page with quote
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        content:
+          type: tab
+
+          fields:
+            quote:
+              label: Quote
+              type: text
+              title: Quote

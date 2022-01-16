@@ -1,0 +1,9 @@
+---
+FORM_LABEL:
+  DESCRIPTION: "Description"
+KITE_LESSON:
+  BLUEPRINT_TITLE: "Cours de kitesurf"
+  LOW_SEASON_TITLE: "Basse saison : "
+  LESSON_PRICE_LOW_SEASON: "Tarif Basse saison en Euros"
+  HIGH_SEASON_TITLE: "Haute saison : "
+  LESSON_PRICE_HIGH_SEASON: "Tarif Haute saison en Euros"
