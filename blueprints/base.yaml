@@ -1,0 +1,24 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        blog:
+          type: tab
+          title: Options de page
+
+          fields:
+
+            # header_options:
+            #   type: section
+            #   title: Options
+            #   underline: true
+
+            header.menu:
+              type: text
+              label: Titre du menu
+              help: Le texte saisi s'affichera comme titre de menu
+              placeholder: "Titre du menu"
+

@@ -1,0 +1,12 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <h1>{{ page.header.title }}</h1>
+
+    {{ page.content|raw }}
+
+    {% if page.header.main_image|first.path is defined %}
+    {{ page.media[page.header.main_image|first.path].html(page.header.title, page.header.main_image_alt, 'myclass')|raw }}
+    {% endif %}
+    
+{% endblock %}

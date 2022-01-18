@@ -1,0 +1,39 @@
+extends@: base
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        blog:
+          type: tab
+          title: Options de page
+
+          fields:
+
+            # header_options:
+            #   type: section
+            #   title: Options
+            #   underline: true
+
+            header.menu:
+              type: text
+              label: Titre du menu
+              help: Le texte saisi s'affichera comme titre de menu
+              placeholder: "Titre du menu"
+
+            header.main_image:
+              type: file
+              label: Image principale
+              multiple: false
+              destination: 'self@'
+              random_name: false
+              avoid_overwriting: false
+              limit: 10
+              accept:
+                - image/*
+            header.main_image_alt:
+              type: text
+              label: Texte Alternatif
+              help: Cet attribut définit le texte alternatif utilisé lorsqu'il est impossible d'afficher l'image (par exemple si l'URL est incorrecte ou si l'image n'est pas encore téléchargée).
+              placeholder: "Texte Alternatif de l'image"

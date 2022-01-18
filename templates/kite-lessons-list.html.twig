@@ -3,12 +3,19 @@
 
 {% block content %}
     <h1>{{ page.header.title }}</h1>
-    
-    <h2>Les différentes formules de cours de kitesurf</h2>
+
+    <a href='#informations-cours-kitesurf'>Informations sur les cours de kite</a>
+    </br>
+    <a href='#stages-cours-kitesurf'>Les différentes formules de cours de kitesurf</a>
+
+    <h2 id='informations-cours-kitesurf'>Informations sur les cours de kite</h2>
+        {{ page.content|raw }}
+
+
+    <h2 id='stages-cours-kitesurf'>Les différentes formules de cours de kitesurf</h2>
 
     {% for item in collection %}
         {% include 'partials/kite/kite-lesson-item.twig' %}
     {% endfor %}
-    <h2>Informations sur les cours</h2>
-        {{ page.content|raw }}
+    
 {% endblock %}
