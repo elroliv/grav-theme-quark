@@ -23,6 +23,7 @@ form:
         blog:
           type: tab
           title: Kite lesson Config
+          ordering@: -2
 
           fields:
 

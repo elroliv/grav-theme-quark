@@ -8,7 +8,7 @@ form:
         blog:
           type: tab
           title: KITE_LESSON.BLUEPRINT_TITLE
-
+          ordering@: -2
           fields:
 
             header.lesson_price_low_season:
@@ -24,5 +24,27 @@ form:
               placeholder:
               validate:
                 type: int
+
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  toggleable: false
+                  default: 0
+                header.routable:
+                  toggleable: false
+                  default: 0
+        # advanced:
+        #   fields:
+        #     overrides:
+        #       fields:
+                
+        #         header.visible:
+        #           highlight: 0
+        #           default: false
+        #         header.routable:
+        #           highlight: 0
+        #           default: false
 
 

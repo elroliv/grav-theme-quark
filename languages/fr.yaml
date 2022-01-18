@@ -1,4 +1,18 @@
 ---
+PLUGIN_FLEX_OBJECTS:
+  AFTER_SAVE: Après l'enregistrement …
+  ACTION:
+    CREATE_NEW: Créer un nouvel objet
+    EDIT_ITEM: Editer un objet
+    LIST_ITEM: Lister les objets
+    DELETE_N: "Supprimer" # In some languages 'delete OBJECT' may need a special declination
+    REALLY_DELETE: "Êtes-vous sur de voulioir supprimer définitivement %s?"
+    SEARCH_PLACEHOLDER: "Rechercher ..."
+    ADVANCED_OPTIONS: "Options Avancées"
+    APPLY_FILTERS: "Appliquer les Filtres"
+    RESET_FILTERS: "Redefinir par défauts"
+    LIST_ITEMS: Lister les objets
+
 FORM_LABEL:
   DESCRIPTION: "Description"
 KITE_LESSON:
