@@ -41,7 +41,7 @@ form:
             header.content.limit:
               type: text
               label: Max kite lessons Count
-              default: 5
+              default: 10
               validate:
                 required: true
                 type: int
@@ -50,7 +50,7 @@ form:
             header.content.order.by:
               type: select
               label: Order By
-              default: date
+              default: folder
               options:
                 folder: Folder
                 title: Title
@@ -60,7 +60,7 @@ form:
             header.content.order.dir:
               type: select
               label: Order
-              default: desc
+              default: asc
               options:
                 asc: Ascending
                 desc: Descending
