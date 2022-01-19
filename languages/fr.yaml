@@ -1,9 +1,11 @@
 ---
+PLUGIN_ADMIN:
+  READ_ONLY_HELPER: Ce champs ne peut pas être modifié
 PLUGIN_FLEX_OBJECTS:
   AFTER_SAVE: Après l'enregistrement …
   ACTION:
     CREATE_NEW: Créer un nouvel objet
-    EDIT_ITEM: Editer un objet
+    EDIT_ITEM: Editer l'objet
     LIST_ITEM: Lister les objets
     DELETE_N: "Supprimer" # In some languages 'delete OBJECT' may need a special declination
     REALLY_DELETE: "Êtes-vous sur de voulioir supprimer définitivement %s?"
@@ -11,7 +13,7 @@ PLUGIN_FLEX_OBJECTS:
     ADVANCED_OPTIONS: "Options Avancées"
     APPLY_FILTERS: "Appliquer les Filtres"
     RESET_FILTERS: "Redefinir par défauts"
-    LIST_ITEMS: Lister les objets
+    LIST_ITEMS: Retour à la liste
 
 FORM_LABEL:
   DESCRIPTION: "Description"

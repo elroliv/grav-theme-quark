@@ -14,79 +14,127 @@ form:
       active: 1
 
       fields:
-        advanced:
+        content:
           fields:
-            overrides:
-              fields:
-                header.child_type:
-                  default: kite-lesson
-        blog:
-          type: tab
-          title: Kite lesson Config
-          ordering@: -2
-
-          fields:
-
-            content_title:
-              type: spacer
-              title: Content Definition
-
-            header.content.items:
-              type: textarea
-              yaml: true
-              label: Kite lessons
-              default: '@self.children'
-              validate:
-                type: yaml
-
-            header.content.limit:
+            header.menu:
+              ordering@: -5
+              style: vertical
               type: text
-              label: Max kite lessons Count
-              default: 10
+              label: Texte à afficher dans le menu
               validate:
                 required: true
-                type: int
-                min: 1
+                type: string
+            header.slug:
+              ordering@: -4
+              style: vertical
+              type: text
+              label: Url de la page
+              validate:
+                required: true
+                type: string
+
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    settings:
+                      fields:
+                        # header.mon_super_champ:
+                          # ordering@: -4
+                          # style: vertical
+                          # type: text
+                          # label: mon_super_champ
+                          # validate:
+                          #   required: true
+                          #   type: string
+                        header.child_type:
+                          default: kite-lesson
+                          type: text
+                          readonly: true
+                          disabled: true
+                          label: PLUGIN_ADMIN.DEFAULT_CHILD_TYPE
+                          help: PLUGIN_ADMIN.READ_ONLY_HELPER
+
+                          
+            overrides:
+              fields:
+                # header.child_type:
+                #   default: kite-lesson
+                #   toggleable: false                  
+                header.menu:
+                  type: hidden
+                header.slug:
+                  type: hidden
+
+        # blog:
+        #   type: tab
+        #   title: Kite lesson Config
+        #   ordering@: -2
+
+        #   fields:
+
+            # content_title:
+            #   type: spacer
+            #   title: Content Definition
+
+            header.content.items:
+              type: hidden
+              yaml: true
+              default: '@self.children'
+              # label: Kite lessons
+              # validate:
+              #   type: yaml
+
+            # header.content.limit:
+            #   type: text
+            #   label: Max kite lessons Count
+            #   default: 10
+            #   validate:
+            #     required: true
+            #     type: int
+            #     min: 1
 
             header.content.order.by:
-              type: select
-              label: Order By
+              type: hidden
               default: folder
-              options:
-                folder: Folder
-                title: Title
-                date: Date
-                default: Default
+              # label: Order By
+              # options:
+              #   folder: Folder
+              #   title: Title
+              #   date: Date
+              #   default: Default
 
             header.content.order.dir:
-              type: select
-              label: Order
+              type: hidden
               default: asc
-              options:
-                asc: Ascending
-                desc: Descending
+              # label: Order
+              # options:
+              #   asc: Ascending
+              #   desc: Descending
 
             header.content.pagination:
-              type: toggle
-              label: Pagination
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
+              type: hidden
+              default: 0
+              # label: Pagination
+              # highlight: 1
+              # options:
+              #   1: PLUGIN_ADMIN.ENABLED
+              #   0: PLUGIN_ADMIN.DISABLED
+              # validate:
+              #   type: bool
 
-            header.content.url_taxonomy_filters:
-              type: toggle
-              label: URL Taxonomy Filters
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
+            # header.content.url_taxonomy_filters:
+            #   type: toggle
+            #   label: URL Taxonomy Filters
+            #   highlight: 1
+            #   default: 1
+            #   options:
+            #     1: PLUGIN_ADMIN.ENABLED
+            #     0: PLUGIN_ADMIN.DISABLED
+            #   validate:
+            #     type: bool
 
           # import@:
           #   type: partials/blog-bits
