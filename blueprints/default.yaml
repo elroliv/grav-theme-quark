@@ -3,13 +3,34 @@ extends@: default
 form:
   fields:
     tabs:
+      type: tabs
+      active: 1
+
       fields:
+        content:
+          fields:
+            header.menu:
+              ordering@: -5
+              style: vertical
+              type: text
+              label: Texte à afficher dans le menu
+              validate:
+                required: true
+                type: string
+            header.slug:
+              ordering@: -4
+              style: vertical
+              type: text
+              label: Url de la page
+              validate:
+                required: true
+                type: string
+
         advanced:
           fields:
-            columns:
-              fields:
-                column1:
-                   fields:
-                     header.body_classes:
-                       markdown: true
-                       description: 'Available classes in Quark Theme (space separated):<br />`header-fixed`, `header-animated`, `header-dark`, `header-transparent`, `sticky-footer`'
+            overrides:
+              fields:             
+                header.menu:
+                  type: hidden
+                header.slug:
+                  type: hidden                
